@@ -2,7 +2,7 @@ class Hangman:
 
     def __init__(self):
 
-        pass
+        self.lives = 6
 
 
     def get_length_of_word(self, word: str) -> int:
@@ -44,12 +44,19 @@ class Hangman:
         return current_word
 
 
-    def play(self, word: str, letter_guessed: str):
+    def get_lives(self, word: str, letter_guessed: str) -> int:
 
-
+        lives: int = self.lives
 
         if not self.check_if_letter_in_word(word, letter_guessed):
 
-            pass
+            lives -= 1
+
+        return lives
+
+
+    def play(self, word: str, letter_guessed: str):
+
+        pass
 
 
