@@ -7,7 +7,9 @@ class Hangman:
 
     def ask_for_word(self):
 
-        pass
+        word: str = input("Enter your word: ")
+        hidden_word: str =  len(word) * "_"
+        return hidden_word
 
 
     def play(self):
